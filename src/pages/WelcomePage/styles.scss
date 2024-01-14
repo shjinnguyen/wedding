@@ -28,6 +28,7 @@
 
     .information-section {
       align-items: center;
+      color: white;
       display: flex;
       flex-direction: column;
       height: 70vh;
@@ -35,14 +36,55 @@
       justify-content: center;
       width: 100%;
       width: 100%;
-      color: white;
       h1 {
-        margin: 0px;
         font-family: "DancingScript-Medium";
         font-size: 60px;
+        margin: 0px;
       }
       #time-and-place {
         font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    .button-show {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .header {
+      display: block;
+      height: fit-content !important;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80%;
+      z-index: 999;
+      .button-hide {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+      ul.menu-list {
+        display: block !important;
+        height: fit-content !important;
+        width: 100%;
+        li {
+          background-color: #8a6c6c;
+          margin: 0 !important;
+          padding-bottom: 6%;
+          padding-left: 6%;
+          padding-top: 6%;
+        }
+      }
+      &.show-menu {
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in-out;
+      }
+      &.hidden-menu {
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in-out;
       }
     }
   }
