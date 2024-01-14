@@ -13,11 +13,11 @@ const WeddingInfoDetailPage = () => {
         style={{ display: "flex", justifyContent: "center" }}
         className="time-and-place"
       >
-        <div style={{ width: "50%", borderRight: "1px solid black" }}>
+        <div className="time-block">
           <h3>Thời gian</h3>
           <p>11:00 09/03/2024</p>
         </div>
-        <div style={{ width: "50%" }}>
+        <div className="place-block">
           <h3>Địa điểm</h3>
           <p>
             Mytho Marina - Cảng Du Thuyền Mỹ Tho
