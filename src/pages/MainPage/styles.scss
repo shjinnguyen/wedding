@@ -1,0 +1,24 @@
+.custom-parallex-wrapper {
+  height: 100vh;
+  width: 100%;
+  .content-wrapper {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  .parallax-image-top-wrapper {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    .parallax-image {
+      background-image: url("../../../public/images/background.jpg");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(80%);
+      height: 80vh;
+      width: 100%;
+    }
+  }
+}

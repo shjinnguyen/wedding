@@ -1,0 +1,49 @@
+.welcome-page {
+  height: 80vh;
+  width: 100%;
+  .content {
+    height: 80vh;
+    width: 100%;
+    .header {
+      align-items: center;
+      display: flex;
+      height: 10vh;
+      justify-content: center;
+
+      ul.menu-list {
+        display: flex; // Makes the list horizontal
+        list-style-type: none; // Removes the bullets
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 0px 10px; // Adds some space between the list items
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .information-section {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+      height: 70vh;
+      justify-content: center;
+      width: 100%;
+      width: 100%;
+      color: white;
+      h1 {
+        margin: 0px;
+        font-family: "DancingScript-Medium";
+        font-size: 60px;
+      }
+      #time-and-place {
+        font-weight: bold;
+      }
+    }
+  }
+}
