@@ -2,7 +2,7 @@ import React from "react";
 
 const MapPage = () => {
   return (
-    <div>
+    <div className="map-page">
       <iframe
         title="Google Maps"
         width="100%"

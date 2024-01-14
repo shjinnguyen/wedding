@@ -12,11 +12,6 @@ const StoryPage = () => {
         đổi phông chữ. Tôi là nơi tuyệt vời để bạn kể một câu chuyện và cho
         người dùng biết thêm về bạn.
       </p>
-      <img
-        src={process.env.PUBLIC_URL + "/images/kiss.jpg"}
-        alt="kiss"
-        width="100%"
-      />
     </div>
   );
 };

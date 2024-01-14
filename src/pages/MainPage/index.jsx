@@ -7,6 +7,7 @@ import MapPage from "../MapPage";
 import ThankYouPage from "../ThankYouPage";
 
 import "./styles.scss";
+import ImageSlider from "../ImageSlider";
 
 const MainPage = () => {
   return (
@@ -18,6 +19,7 @@ const MainPage = () => {
         <div className="content-wrapper">
           <WelcomePage />
           <StoryPage />
+          <ImageSlider />
           <WeddingInfoDetailPage />
           <MapPage />
           <ThankYouPage />

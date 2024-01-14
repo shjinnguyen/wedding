@@ -18,9 +18,10 @@
 
         li {
           margin: 0px 10px; // Adds some space between the list items
-          a {
+          &.menu-item {
             color: white;
             text-decoration: none;
+            cursor: pointer;
           }
         }
       }
@@ -68,6 +69,10 @@
           position: absolute;
           right: 20px;
           top: 20px;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
         }
         ul.menu-list {
           display: block !important;
@@ -94,6 +99,10 @@
         position: absolute;
         right: 20px;
         top: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
       }
       .information-section {
         h1 {

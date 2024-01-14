@@ -1,44 +1,57 @@
 import React from "react";
+import HamburgerIcon from "../../components/icon/HamburgerIcon";
 
 import "./styles.scss";
+import CloseIcon from "../../components/icon/CloseIcon";
 
 const WelcomePage = () => {
   const [showMenu, setShowMenu] = React.useState(false);
+
+  const scrollTo = (className) => {
+    const element = document.getElementsByClassName(className)[0];
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setShowMenu(false);
+  };
 
   return (
     <div className="welcome-page">
       <div className="content">
         <div className={`header ${showMenu ? "show-menu" : "hidden-menu"}`}>
           <ul className="menu-list">
-            <li>
-              <a href="google.com">TRANG CHỦ</a>
+            <li className="menu-item" onClick={() => scrollTo("welcome-page")}>
+              TRANG CHỦ
             </li>
-            <li>
-              <a href="google.com">CÂU CHUYỆN</a>
+            <li className="menu-item" onClick={() => scrollTo("story-page")}>
+              CÂU CHUYỆN
             </li>
-            <li>
-              <a href="google.com">ẢNH CƯỚI</a>
+            <li className="menu-item" onClick={() => scrollTo("image-slider")}>
+              ẢNH CƯỚI
             </li>
-            <li>
-              <a href="google.com">HÔN LỄ</a>
+            <li
+              className="menu-item"
+              onClick={() => scrollTo("wedding-detail")}
+            >
+              HÔN LỄ
             </li>
-            <li>
-              <a href="google.com">CHỈ DẪN</a>
+            <li className="menu-item" onClick={() => scrollTo("map-page")}>
+              CHỈ DẪN
             </li>
-            <li>
-              <a href="google.com">QUÀ CƯỚI</a>
-            </li>
-            <li>
-              <a href="google.com">TRẢ LỜI</a>
+            <li
+              className="menu-item"
+              onClick={() => scrollTo("thank-you-wrapper")}
+            >
+              LỜI CẢM ƠN
             </li>
           </ul>
           <button className="button-hide" onClick={() => setShowMenu(false)}>
-            X
+            <CloseIcon />
           </button>
         </div>
         {!showMenu && (
           <button className="button-show" onClick={() => setShowMenu(true)}>
-            Show Menu
+            <HamburgerIcon />
           </button>
         )}
         <div className="information-section">
