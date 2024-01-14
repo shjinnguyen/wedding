@@ -2,6 +2,7 @@ import React from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import WelcomePage from "../WelcomePage";
 import StoryPage from "../StoryPage";
+import WeddingInfoDetailPage from "../WeddingInfoDetailPage";
 
 import "./styles.scss";
 
@@ -16,6 +17,7 @@ const MainPage = () => {
         <div className="content-wrapper">
           <WelcomePage />
           <StoryPage />
+          <WeddingInfoDetailPage />
         </div>
         {/* </Parallax> */}
       </ParallaxProvider>
