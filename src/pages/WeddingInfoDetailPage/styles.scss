@@ -1,17 +1,17 @@
 .wedding-detail {
   background-color: rgb(214, 187, 110);
   height: fit-content;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  .title {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
   .time-and-place {
     margin: auto;
     text-align: center;
     width: 90%;
-    h1 {
-      color: white;
-      font-size: 50px;
-      margin-bottom: 100px;
-      text-align: center;
-    }
   }
 }

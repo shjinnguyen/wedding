@@ -5,10 +5,10 @@ import "./styles.scss";
 const WeddingInfoDetailPage = () => {
   return (
     <div className="wedding-detail">
-      <h1 style={{ textAlign: "center" }}>
+      <div className="title">
         LỄ <br />
         THÀNH HÔN
-      </h1>
+      </div>
       <div
         style={{ display: "flex", justifyContent: "center" }}
         className="time-and-place"
