@@ -1,10 +1,16 @@
 .thank-you-wrapper {
   .title {
-    font-size: 4vw;
+    font-size: 1.5vw;
   }
   background-color: rgb(214, 187, 110);
   color: white;
   padding-bottom: 30px;
   padding-top: 30px;
   text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+  .title {
+    font-size: 4vw;
+  }
 }
