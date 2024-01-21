@@ -4,7 +4,7 @@ import ScrollToTop from "react-scroll-to-top";
 import ArrowTopIcon from "../../components/icon/ArrowTopIcon";
 import WelcomePage from "../WelcomePage";
 import StoryPage from "../StoryPage";
-import ImageSlider from "../ImageSlider";
+import ImageSlider from "../../components/ImageSlider";
 import WeddingInfoDetailPage from "../WeddingInfoDetailPage";
 import MapPage from "../MapPage";
 import ThankYouPage from "../ThankYouPage";
