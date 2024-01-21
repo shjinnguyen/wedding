@@ -1,53 +1,55 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 
-/**
- * @brief Timer component to display the time remaining until a future moment.
- *
- * @param props The component props.
- * @param props.futureMoment The future moment in milliseconds.
- * @returns The rendered Timer component.
- */
+import "./styles.scss";
+
 const Timer = ({ futureMoment }) => {
-  const [timeRemaining, setTimeRemaining] = useState("");
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
-  /**
-   * @brief Calculates the time remaining based on the difference between the future moment and the current time.
-   *
-   * @param difference The time difference in milliseconds.
-   * @param suffix The suffix to append to the time remaining.
-   */
-  const calculateTimeRemaining = (difference, suffix) => {
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const calculateTimeLeft = (futureMoment) => {
+    const now = moment();
+    const duration = moment.duration(futureMoment.diff(now));
 
-    if (days > 3) {
-      setTimeRemaining(`${days} ngày ${suffix}`);
-    } else {
-      setTimeRemaining(`${days} ngày ${hours} giờ ${minutes} phút ${suffix}`);
-    }
+    const days = Math.floor(duration.asDays());
+    const hours = duration.hours();
+    const minutes = duration.minutes();
+    const seconds = duration.seconds();
+
+    setDays(days);
+    setHours(hours);
+    setMinutes(minutes);
+    setSeconds(seconds);
   };
 
   useEffect(() => {
-    const currentTime = new Date().getTime();
-    if (futureMoment > currentTime) {
-      const interval = setInterval(() => {
-        const difference = futureMoment - currentTime;
-        calculateTimeRemaining(difference, "nữa ...");
-      }, 1000);
-
-      return () => {
-        clearInterval(interval);
-      };
-    } else {
-      const difference = currentTime - futureMoment;
-      calculateTimeRemaining(difference, "bên nhau");
-    }
+    calculateTimeLeft(futureMoment);
+    const interval = setInterval(() => calculateTimeLeft(futureMoment), 1000);
+    return () => clearInterval(interval);
   }, [futureMoment]);
 
-  return <div>{timeRemaining}</div>;
+  return (
+    <div className="timer-left">
+      <div className="timer-block">
+        <h2>{days}</h2>
+        <p>Ngày</p>
+      </div>
+      <div className="timer-block">
+        <h2>{hours}</h2>
+        <p>Giờ</p>
+      </div>
+      <div className="timer-block">
+        <h2>{minutes}</h2>
+        <p>Phút</p>
+      </div>
+      <div className="timer-block">
+        <h2>{seconds}</h2>
+        <p>Giây</p>
+      </div>
+    </div>
+  );
 };
 
 export default Timer;
