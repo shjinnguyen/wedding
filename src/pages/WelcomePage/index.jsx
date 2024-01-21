@@ -1,8 +1,9 @@
 import React from "react";
+import Timer from "./components/Timer.jsx";
 import HamburgerIcon from "../../components/icon/HamburgerIcon";
+import CloseIcon from "../../components/icon/CloseIcon";
 
 import "./styles.scss";
-import CloseIcon from "../../components/icon/CloseIcon";
 
 const WelcomePage = () => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -57,6 +58,9 @@ const WelcomePage = () => {
         <div className="information-section">
           <h1>Vĩnh Phúc & Việt Trinh</h1>
           <p id="time-and-place">11:00 09/03/2024 | My Tho Marina</p>
+          <Timer
+            futureMoment={new Date("2024-03-09T11:00:00+07:00").getTime()}
+          />
         </div>
       </div>
     </div>

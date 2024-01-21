@@ -1,13 +1,13 @@
 .welcome-page {
-  height: 80vh;
+  height: 80dvh;
   width: 100%;
   .content {
-    height: 80vh;
+    height: 80dvh;
     width: 100%;
     .header {
       align-items: center;
       display: flex;
-      height: 10vh;
+      height: 10dvh;
       justify-content: center;
 
       ul.menu-list {
@@ -32,7 +32,7 @@
       color: white;
       display: flex;
       flex-direction: column;
-      height: 70vh;
+      height: 70dvh;
       justify-content: center;
       width: 100%;
       h1 {
