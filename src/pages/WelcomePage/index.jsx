@@ -9,6 +9,8 @@ import "./styles.scss";
 const WelcomePage = () => {
   const [showMenu, setShowMenu] = React.useState(false);
 
+  const weddingDate = moment("2024-03-09T11:00:00+07:00").utcOffset(7);
+
   const scrollTo = (className) => {
     const element = document.getElementsByClassName(className)[0];
     if (element) {
@@ -58,8 +60,10 @@ const WelcomePage = () => {
         )}
         <div className="information-section">
           <h1>Vĩnh Phúc & Việt Trinh</h1>
-          <p id="time-and-place">11:00 09/03/2024 | My Tho Marina</p>
-          <Timer futureMoment={moment("2024-03-09T11:00:00+07:00")} />
+          <p id="time-and-place">
+            {weddingDate.format("HH:mm DD/MM/yyyy")} | My Tho Marina
+          </p>
+          <Timer futureMoment={weddingDate} />
         </div>
       </div>
     </div>
