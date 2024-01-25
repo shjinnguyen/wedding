@@ -16,7 +16,7 @@ const ImageSlider = () => {
     autoplay: true,
   };
 
-  const images = Array.from({ length: 11 }, (_, index) => (
+  const images = Array.from({ length: 10 }, (_, index) => (
     <img
       key={index}
       src={process.env.PUBLIC_URL + `/images/${index + 1}.jpg`}

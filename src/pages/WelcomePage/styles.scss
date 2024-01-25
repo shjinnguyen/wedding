@@ -28,6 +28,7 @@
     }
 
     .information-section {
+      position: relative;
       align-items: center;
       color: white;
       display: flex;
@@ -109,7 +110,7 @@
           font-size: 9vw;
         }
         #time-and-place {
-          font-size: 3.5vw;
+          font-size: 4vw;
         }
       }
     }
