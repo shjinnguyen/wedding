@@ -3,7 +3,6 @@ import "./styles.scss";
 
 const StoryPage = () => {
   return (
-    <div className="story-page">
       <h1>CÂU CHUYỆN TÌNH YÊU CỦA CHÚNG TÔI</h1>
       <h3>VÀ CHÚNG TÔI ĐÃ BẮT ĐẦU ….</h3>
       <p>
@@ -11,7 +10,7 @@ const StoryPage = () => {
         trường cấp 3 – trường THPT Nguyễn Đình Chiểu – Mỹ Tho, Tiền Giang, nhưng
         lúc ấy chúng tôi vẫn chưa có bất kỳ dấu hiệu nào về tình yêu. Cho đến
         sau nhiều năm, tình cờ gặp lại nhau trên trang mạng xã hội – Facebook –
-        nơi ấy đã mở ra một trang mới cho chúng tôi và chút cảm mếm của 2 đứa
+        nơi ấy đã mở ra một trang mới cho chúng tôi và chút cảm mến của 2 đứa
         cũng đã bắt đầu từ lúc ấy.
       </p>
       <p>
@@ -37,7 +36,7 @@ const StoryPage = () => {
       <p>
         Ngày hôm nay, sau hơn ba năm quen nhau, chúng tôi được sánh bước bên
         nhau với một cương vị mới trong bước ngoặt mới của cuộc đời, và được sự
-        đồng ý của hai bên gia đình, sực chúc phúc của tất cả mọi người, chúng
+        đồng ý của hai bên gia đình, sự chúc phúc của tất cả mọi người, chúng
         tôi – Vĩnh Phúc và Việt Trinh – chính thức trở thành vợ chồng của nhau,
         sẽ cùng nhau vui buồn, vượt muôn ngàn sóng gió của cuộc đời để viết lên
         nhiều trang mới cho cuộc sống của chúng tôi ở hiện tại cũng như tương
