@@ -3,6 +3,7 @@ import "./styles.scss";
 
 const StoryPage = () => {
   return (
+    <div className="story-page">
       <h1>CÂU CHUYỆN TÌNH YÊU CỦA CHÚNG TÔI</h1>
       <h3>VÀ CHÚNG TÔI ĐÃ BẮT ĐẦU ….</h3>
       <p>
