@@ -1,11 +1,26 @@
+@media only screen and (max-width: 600px) {
+  .custom-parallex-wrapper {
+    width: 100%;
+    height: 100vh;
+    .content-wrapper {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (min-width: 601px) {
+  .custom-parallex-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}
 .custom-parallex-wrapper {
   height: 100dvh;
-  width: 70%;
-  max-width: 800px;
   margin: auto;
   .content-wrapper {
-    width: 70%;
-    max-width: 800px;
     overflow: hidden;
     position: absolute;
     top: 0;
