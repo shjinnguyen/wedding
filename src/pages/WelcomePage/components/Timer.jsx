@@ -16,10 +16,10 @@ const Timer = ({ futureMoment }) => {
     const duration = moment.duration(futureMoment.diff(now));
 
     const newTime = {
-      days: Math.floor(duration.asDays()),
-      hours: duration.hours(),
-      minutes: duration.minutes(),
-      seconds: duration.seconds(),
+      days: Math.abs(Math.floor(duration.asDays())),
+      hours: Math.abs(duration.hours()),
+      minutes: Math.abs(duration.minutes()),
+      seconds: Math.abs(duration.seconds()),
     };
 
     setTime(newTime);

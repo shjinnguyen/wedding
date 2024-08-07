@@ -1,8 +1,11 @@
 .custom-parallex-wrapper {
   height: 100dvh;
-  width: 100%;
+  width: 70%;
+  max-width: 800px;
+  margin: auto;
   .content-wrapper {
-    left: 0;
+    width: 70%;
+    max-width: 800px;
     overflow: hidden;
     position: absolute;
     top: 0;
